@@ -1,0 +1,28 @@
+{
+  "name": "cats-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "jest --watchAll --coverage",
+    "coverage": "jest --coverage",
+    "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js --debug\" \"live-server\"",
+    "dev1": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers.js"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^22.1.0",
+    "live-server": "^1.2.2",
+    "watchify": "^4.0.0"
+  }
+}
